@@ -3,10 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SINGOLO</title>
+    <title>Simple-Singolo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/sass/style.css" />
   </head>
   <body>
-    <h1>SINGOLO</h1>
+    <header class="header">
+      <div class="wrapper">
+        <a href="#" class="logo">SINGOLO</a>
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li>HOME</li>
+            <li>SERVICES</li>
+            <li>PORTFOLIO</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="slider">
+      <div class="wrapper"></div>
+    </div>
+    <section class="services">
+      <div class="wrapper">
+        <div class="section__header">
+          <h1>Our Services</h1>
+          <p>
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
+            lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+            tortor mauris condimentum nibh.
+          </p>
+        </div>
+        <div class="services__list">
+          <div class="layout-3-column">
+            <div class="tool">
+              <div class="tool__up">
+                <div class="tool__icon">
+                  <span class="icon-circle icon-circle_pencil"></span>
+                </div>
+                <h3>Custom Design</h3>
+                <p>
+                  Curabitur vestibulum eget mauris quis laoreet. Phasellus in
+                  quam laoreet, viverra lacus ut, ultrices velit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="wrapper">
+        <div class="section__header">
+          <h1>Portfolio</h1>
+          <p class="portfolio__description">
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </p>
+          <div class="portfolio__tags">
+            <span class="tag_selected">All</span>
+            <span class="tag_dart">Web Design</span>
+          </div>
+          <div class="layout-4-column">
+            <div class="portfolio-image">
+              <img src="/img/portfolio/portfolio-1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrapper">
+        <p class="copyright">© Copyright 2013</p>
+        <div class="footer-social-network">
+          <span class="footer-circle footer-circle__facebook"></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
