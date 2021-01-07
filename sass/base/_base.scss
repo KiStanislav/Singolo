@@ -3,9 +3,19 @@ html {
 }
 
 h1 {
-  font-size: 3rem;
-  background-color: rgb(255, 115, 0);
-  width: 200px;
+margin: 29px 0 35px 40px;   
+font-style: normal;
+font-weight: bold;
+font-size: 2.5rem;
+line-height: 3.0rem;
+letter-spacing: -0.03em;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.0rem;
+  line-height: 3.6rem;
 }
 
 body {
