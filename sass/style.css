@@ -16,6 +16,23 @@ h2 {
   font-weight: 900;
   font-size: 3rem;
   line-height: 3.6rem;
+  color: #666D89;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: #666D89;
+}
+
+p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: #767E9E;
 }
 
 body {
@@ -79,6 +96,67 @@ body {
 
 .slider__shadow {
   box-shadow: 0 6px 0 #EA676B;
+}
+
+.services-section-header {
+  width: 936px;
+  height: 101px;
+  padding: 59px 44px 60px 40px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.services-background-shadow {
+  background-color: #F2F2F2;
+  box-shadow: 0 6px 0 #FFFFFF;
+}
+
+.tool {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.tool__item-1 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.tool__item-2 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.tool__item-3 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.tool__item-4 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.tool__item-5 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.tool__item-6 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.portfolio-bg {
+  width: 1020px;
+  height: 864px;
+}
+
+.section-header {
+  display: flex;
+  background: #2D303A;
 }
 
 /*# sourceMappingURL=style.css.map */

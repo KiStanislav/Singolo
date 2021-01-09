@@ -3,22 +3,39 @@ html {
 }
 
 h1 {
-margin: 29px 0 35px 40px;   
-font-style: normal;
-font-weight: bold;
-font-size: 2.5rem;
-line-height: 3.0rem;
-letter-spacing: -0.03em;
+  margin: 29px 0 35px 40px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.03em;
 }
 
 h2 {
   font-style: normal;
   font-weight: 900;
-  font-size: 3.0rem;
+  font-size: 3rem;
   line-height: 3.6rem;
+  color: $color-h2-h3;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: $color-h2-h3;
+}
+
+p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 3.0rem;
+  color: $color-p;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: 'Lato', Verdana, sans-serif;
+  font-family: "Lato", Verdana, sans-serif;
 }
