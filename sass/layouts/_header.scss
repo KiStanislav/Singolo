@@ -1,25 +1,15 @@
 .header {
   color: $color-logo;
-  
-  // padding: 29px 0 39px 0;
 }
 
-// .header__wrapper {
-//   padding: 29px 0 33px 0;
-// }
-
-.header__main{
+.header__main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: $color-bg;
+  border-bottom: 6px solid $color-bg-border;
 }
 
-.header__border {
-  display: flex;
-  background: $color-bg-border;
-  padding: 3px 0;
-}
 .navigation {
   margin: 42px 40px 42px 0;
   display: flex;

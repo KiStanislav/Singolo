@@ -4,13 +4,10 @@
   padding: 59px 44px 60px 40px;
 }
 
-.section-header h2 {
-  margin: 0;
-}
-
 .services-background-shadow {
   background-color: $color-services-background;
-  box-shadow: 0 6px 0 $color-services-shadow;
+  border-bottom: 6px solid $color-services-shadow;
+  // box-shadow: 0 6px 0 $color-services-shadow;
 }
 
 .tool {
