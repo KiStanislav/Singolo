@@ -446,28 +446,28 @@ html [type="button"], /* 1 */
   -webkit-appearance: button; /* 2 */
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+// button,
+// [type="button"],
+// [type="reset"],
+// [type="submit"] {
 
-  /**
-   * Remove the inner border and padding in Firefox.
-   */
+//   /**
+//    * Remove the inner border and padding in Firefox.
+//    */
 
-  &::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
+//   &::-moz-focus-inner {
+//     border-style: none;
+//     padding: 0;
+//   }
 
-  /**
-   * Restore the focus styles unset by the previous rule.
-   */
+//   /**
+//    * Restore the focus styles unset by the previous rule.
+//    */
 
-  &:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
-}
+//   &:-moz-focusring {
+//     outline: 1px dotted ButtonText;
+//   }
+// }
 
 /**
  * Show the overflow in Edge.
@@ -644,4 +644,8 @@ template {
 
 [hidden] {
   display: none;
+}
+
+* {
+  box-sizing: border-box;
 }
