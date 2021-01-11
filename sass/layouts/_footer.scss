@@ -1,10 +1,25 @@
+.footer {
+  background: $color-bg;
+}
 .footer-bg {
   // width: 1020px;
   // height: 76px;
-  background: $color-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .copyright {
-  margin: 0;
-  padding: 30px 0 29px 0;
+  margin-left: 40px;
+  // padding: 30px 0 29px 0;
 }
+
+.footer-social-network {
+  padding: 22px 42px;
+}
+
+.footer-circle {
+  margin-left: 8px;
+  cursor: pointer;
+}
+

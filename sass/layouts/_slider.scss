@@ -1,5 +1,6 @@
-.slider__shadow {
-  box-shadow: 0 6px 0 #EA676B;
+.slider {
+  background: $color-slider-bg;
+  border-bottom: 6px solid $color-slider-shadow;
 }
 
 
