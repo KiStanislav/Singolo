@@ -2,8 +2,6 @@
   background: $color-bg;
 }
 .footer-bg {
-  // width: 1020px;
-  // height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,7 +9,6 @@
 
 .copyright {
   margin-left: 40px;
-  // padding: 30px 0 29px 0;
 }
 
 .footer-social-network {
@@ -23,3 +20,22 @@
   cursor: pointer;
 }
 
+.facebook:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
+}
+
+.google:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
+}
+
+.twitter:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
+}
+
+.linkedin:hover {
+  filter: brightness(1.8);
+  transition: 0.5s;
+}
