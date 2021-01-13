@@ -1,0 +1,14 @@
+.footer {
+  background: $color-bg;
+}
+.footer-bg {
+  @include flex();
+}
+
+.copyright {
+  margin-left: 40px;
+}
+
+.footer-social-network {
+  padding: 22px 42px;
+}

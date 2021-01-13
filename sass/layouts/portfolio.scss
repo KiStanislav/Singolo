@@ -1,0 +1,25 @@
+.portfolio {
+  border-bottom: 6px solid $color-portfolio-border;
+  background: $color-portfolio-bg;
+}
+.portfolio-bg {
+  margin: auto;
+  padding-bottom: 68px;
+}
+
+.portfolio-section-header {
+  padding: 59px 40px 0 40px;
+}
+
+.portfolio-description {
+  margin-top: 14px;
+}
+
+.portfolio__tags {
+  padding: 18px 0 27px 40px;
+  color: $color-tag_dart;
+}
+
+.layout-4-column {
+  padding: 0 40px;
+}

@@ -1,0 +1,35 @@
+.tool {
+  @include layout-3-columns();
+  gap: 20px;
+}
+
+.tool__item-1 {
+  @include layout-2-columns();
+}
+
+.tool__item-2 {
+  @include layout-2-columns();
+}
+
+.tool__item-3 {
+  @include layout-2-columns();
+}
+
+.tool__item-4 {
+  @include layout-2-columns();
+}
+
+.tool__item-5 {
+  @include layout-2-columns();
+}
+
+.tool__item-6 {
+  @include layout-2-columns();
+}
+
+.portfolio-image {
+  @include layout-4-columns();
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}

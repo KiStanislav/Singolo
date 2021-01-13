@@ -1,0 +1,31 @@
+html {
+  font-size: 10px;
+}
+
+h1 {
+  @include font(2.5rem, bold, 3rem);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  @include font(3rem, 900, 3.6rem);
+  color: $color-h2-h3;
+}
+
+h3 {
+  @include font(1.8rem, 900, 1.8rem);
+  color: $color-h2-h3;
+}
+
+p {
+  @include font(1.8rem, 300, 3rem);
+  color: $color-p;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Lato", Verdana, sans-serif;
+}
+ul {
+  margin: 0;
+}
