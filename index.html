@@ -11,31 +11,31 @@
     />
     <link rel="stylesheet" href="./sass/style.css" />
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="wrapper header__wrapper">
         <div class="header__main">
           <a href="#" class="logo"
-            ><h1>SINGOLO<span class="star-color">*</span></h1></a
-          >
+            ><h1>SINGOLO<span class="star-color">*</span></h1></a>
           <nav class="header__navigation">
-            <ul class="navigation">
-              <li class="navigation_link-color">HOME</li>
-              <li class="navigation_link">SERVICES</li>
-              <li class="navigation_link">PORTFOLIO</li>
-              <li class="navigation_link">ABOUT</li>
-              <li class="navigation_link">CONTACT</li>
+            <ul class="navigation" id="menu">
+              <li><a class="active" href="#home">HOME</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#portfolio">PORTFOLIO</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
     <div class="slider">
+      <div id="home"></div>
       <div class="wrapper slider__wrapper">
         <img class="slider__shadow" src="./img/slider/slider-bg.svg" alt="" />
       </div>
     </div>
-    <section class="services">
+    <section class="services" id="services">
       <div class="wrapper services__wrapper">
         <div class="services-bg">
           <div class="services-header">
@@ -141,7 +141,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="wrapper portfolio__wrapper">
         <div class="portfolio-bg">
           <div class="portfolio-section-header">
@@ -192,7 +192,7 @@
               <span class="portfolio__item-11"
                 ><img src="./img/portfolio/portfolio-11.jpg" alt=""
               /></span>
-              <span class="portfolio__item-12"
+              <span class="portfolio__item-12" 
                 ><img src="./img/portfolio/portfolio-12.jpg" alt=""
               /></span>
             </div>
@@ -226,5 +226,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

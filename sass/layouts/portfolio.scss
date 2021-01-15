@@ -1,6 +1,8 @@
 .portfolio {
   border-bottom: 6px solid $color-portfolio-border;
   background: $color-portfolio-bg;
+  position: relative;
+  top: 95px;
 }
 .portfolio-bg {
   margin: auto;

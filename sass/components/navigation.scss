@@ -3,19 +3,22 @@
   @include font(1.2rem, bold, 1.4rem);
   text-align: right;
   letter-spacing: -0.035em;
-  &_link-color {
+  li:first-child {
     list-style: none;
-    color: $color-main-nav;
-    padding: 0 10px;
     cursor: pointer;
   }
-  &_link {
-    padding: 0 10px;
-    margin-left: 30px;
+  a {
+    color: $color-logo;
+    text-decoration: none;
+    margin-right: 28px;
     cursor: pointer;
     &:hover {
       color: $color-main-nav;
       @extend %transition;
     }
   }
+}
+
+a.active {
+  color: $color-main-nav
 }
