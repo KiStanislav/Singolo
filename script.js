@@ -5,13 +5,14 @@
 //   event.target.classList.add('active');
 // });
 
+//interactive navigation menu
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
   const curPos = window.scrollY;
-  const divs = document.querySelectorAll('#body>*');
+  const ancher_block = document.querySelectorAll('#body>div, section');
   const links = document.querySelectorAll('#menu a');
-  divs.forEach((el) => {
+  ancher_block.forEach((el) => {
     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       links.forEach((a) => {
         a.classList.remove('active');

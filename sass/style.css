@@ -545,13 +545,14 @@ ul {
 .slider {
   background: #F06C64;
   border-bottom: 6px solid #EA676B;
-  top: 100px;
+  top: 90px;
   position: relative;
 }
 
 #home {
-  position: absolute;
-  top: -95px;
+  position: relative;
+  width: 10px;
+  height: 10px;
 }
 
 .tool {

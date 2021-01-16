@@ -1,12 +1,12 @@
 .slider {
   background: $color-slider-bg;
   border-bottom: 6px solid $color-slider-shadow;
-  top: 100px;
+  top: 90px;
   position: relative;
 }
 
 #home {
-  position: absolute;
-  top: -95px;
+  position: relative;
+  width: 10px;
+  height: 10px;
 }
-
