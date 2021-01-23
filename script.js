@@ -1,10 +1,3 @@
-// const MENU = document.getElementById('menu');
-
-// MENU.addEventListener('click', (event) => {
-//   MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-//   event.target.classList.add('active');
-// });
-
 //interactive navigation menu
 document.addEventListener('scroll', onScroll);
 
@@ -23,45 +16,36 @@ function onScroll(event) {
     }
   });
 }
- 
-// const list = document.getElementById('list');
 
+// interactive tab menu
+const TAB = document.getElementById('tab');
 
-// list.querySelectorAll('span');
-// function flipArr(arr, i) {
-//   var f = arr.slice(0, ++i),
-//       s = arr.slice(i),
-//       r = f.splice(-2).reverse();
-//   return f.concat(r).concat(s);
-// }
-// console.log('.portfolio-image');
+TAB.addEventListener('click', (event) => {
+  TAB.querySelectorAll('span').forEach(el => el.classList.remove('tag_selected'));
+  event.target.classList.add('tag_selected');
+  shuffleNodes();
+});
 
-// flipArr();
-function random() {
-  let item1 = document.getElementById("item-1");
-  let item12 = document.getElementById("item-12");
-  let rel = item1.src;
-  item1.src = item12.src;
-  item12.src = rel;
-}
+//shuffle tab menu
+let list = document.getElementById("list");
 
-random();
+function shuffle(items) {
+  let cached = items.slice(0), temp, i = cached.length, rand;
+    while(--i) {
+      rand = Math.floor(i * Math.random());
+      temp = cached[rand];
+      cached[rand] = cached[i];
+      cached[i] = temp;
+    }
+    return cached;
+};
 
-//Замена картинок на es6
-
-// const btn = document.querySelector('[type="button"]');
-// const [ pic1, pic2 ] = document.querySelectorAll('[name="pic"]');
-
-// btn.addEventListener('click', () => [ pic1.src, pic2.src ] = [ pic2.src, pic1.src ]);
-// <form name="form1">
-//    <img name="pic" src="https://dabeng.github.io/img/angularjs.png" alt="">
-//    <img name="pic" src="http://icons.iconarchive.com/icons/sicons/basic-round-social/256/ember-js-icon.png" alt="">
-//    <input type="button" value="Кнопка кнопка">
-// </form>
-
-
-//Рандом из определенных чисел
-
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
-}
+function shuffleNodes() {
+  let nodes = list.children, i = 0;
+  nodes = Array.prototype.slice.call(nodes);
+  nodes = shuffle(nodes);
+  while(i < nodes.length) {
+    list.appendChild(nodes[i]);
+    ++i;
+    }
+};

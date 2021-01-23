@@ -4,18 +4,16 @@
   text-align: center;
   cursor: pointer;
   @extend %transition;
-  &_selected {
-    @include tag();
-    border: 1px solid $color-tag_selected-border;
-    color: $color-tag_selected;
-  }
-  &_dart {
-    @include tag();
+  @include tag();
     border: 1px solid $color-tag_dart-border;
     color: $color-tag_dart;
     &:hover {
       color: $color-tag_selected;
   border: 1px solid $color_tag_selected-border;
     }
-  }
+  &_selected {
+    @include tag();
+    border: 1px solid $color-tag_selected-border;
+    color: $color-tag_selected;
+  }  
 }

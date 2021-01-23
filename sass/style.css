@@ -605,7 +605,7 @@ ul {
   background-color: #F2F2F2;
   border-bottom: 6px solid #FFFFFF;
   position: relative;
-  top: 95px;
+  top: 90px;
 }
 
 .services-header {
@@ -640,7 +640,7 @@ ul {
   border-bottom: 6px solid #323746;
   background: #2D303A;
   position: relative;
-  top: 95px;
+  top: 90px;
 }
 
 .portfolio-bg {
@@ -668,7 +668,7 @@ ul {
 .footer {
   background: #2D303A;
   position: relative;
-  top: 95px;
+  top: 90px;
 }
 
 .footer-bg {
@@ -723,22 +723,20 @@ a.active {
   margin-right: 8px;
   text-align: center;
   cursor: pointer;
+  padding: 4px 5px;
+  border-radius: 5px;
+  border: 1px solid #767E9E;
+  color: #767E9E;
+}
+.tag:hover {
+  color: #DEDEDE;
+  border: 1px solid #bbbbbb;
 }
 .tag_selected {
   padding: 4px 5px;
   border-radius: 5px;
   border: 1px solid #bbbbbb;
   color: #DEDEDE;
-}
-.tag_dart {
-  padding: 4px 5px;
-  border-radius: 5px;
-  border: 1px solid #767E9E;
-  color: #767E9E;
-}
-.tag_dart:hover {
-  color: #DEDEDE;
-  border: 1px solid #bbbbbb;
 }
 
 /*# sourceMappingURL=style.css.map */
