@@ -49,3 +49,23 @@ function shuffleNodes() {
     ++i;
     }
 };
+
+//slider
+let offset = -3063; 
+const sliderline = document.querySelector('.slider-line');
+
+document.querySelector('.arrow-left').addEventListener('click', function() {
+  offset = offset - 1021; 
+  if (offset < -6126){
+    offset = -3063;
+  }
+  sliderline.style.left = offset + 'px';
+});
+
+document.querySelector('.arrow-right').addEventListener('click', function() {
+  offset = offset + 1021; 
+  if (offset > 0){
+    offset = -3063;
+  }
+  sliderline.style.left = offset + 'px';
+});
