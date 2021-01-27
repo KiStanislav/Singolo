@@ -1,0 +1,52 @@
+%hamburger-line {
+  display: none;
+  content: '';
+  position: absolute;
+  background: $color-logo;
+  border-radius: 5px;
+  height: 2.4px;
+  width: 100%;
+  @include media-768 {
+    display: inline-block;
+  }
+  @include media-375 {
+    display: inline-block;
+  }
+  @include media-320 {
+    display: inline-block;
+  }
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 25px;
+  height: 20px;
+  @include media-768 {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  @include media-375 {
+    display: inline-block;
+  }
+  @include media-320 {
+    display: inline-block;
+  }
+  &::before {
+    @extend %hamburger-line;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    @extend %hamburger-line;
+    bottom: 0;
+    left: 0;
+  }
+  
+}
+
+.hamburger__line {
+ @extend %hamburger-line;
+ top: calc(50% - 1.2px);
+ left: 0;
+}

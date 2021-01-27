@@ -6,6 +6,10 @@ html {
 h1 {
   @include font(2.5rem, bold, 3rem);
   letter-spacing: -0.03em;
+  @include media-768 {
+    @include font(2rem, bold, 2.4rem);
+  letter-spacing: -0.03em;
+  }
 }
 
 h2 {

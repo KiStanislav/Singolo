@@ -1,30 +1,70 @@
 .tool {
   @include layout-3-columns();
-  gap: 20px;
+  gap: 50px;
+  @include media-1020 {
+    @include layout-3-columns($columns: 1fr 1fr, $rows: 1fr 1fr 1fr);
+    margin-right: 35px;
+    
+  }
+  @include media-768 {
+    @include layout-3-columns($columns: 1fr, $rows: 1fr 1fr 1fr 1fr 1fr 1fr);
+    margin-right: 0;
+    gap: 15px;
+  }
 }
 
 .tool__item-1 {
   @include layout-2-columns();
+  @include media-768 {
+    gap: 10px;
+    width: 300px;
+    justify-self: center;
+  }
 }
 
 .tool__item-2 {
   @include layout-2-columns();
+  @include media-768 {
+    gap: 10px;
+    width: 300px;
+    justify-self: center;
+  }
 }
 
 .tool__item-3 {
   @include layout-2-columns();
+  @include media-768 {
+    gap: 10px;
+    width: 300px;
+    justify-self: center;
+  }
 }
 
 .tool__item-4 {
   @include layout-2-columns();
+  @include media-768 {
+    gap: 10px;
+    width: 300px;
+    justify-self: center;
+  }
 }
 
 .tool__item-5 {
   @include layout-2-columns();
+  @include media-768 {
+    gap: 10px;
+    width: 300px;
+    justify-self: center;
+  }
 }
 
 .tool__item-6 {
   @include layout-2-columns();
+  @include media-768 {
+    gap: 10px;
+    width: 300px;
+    justify-self: center;
+  }
 }
 
 .portfolio-image {
@@ -32,4 +72,8 @@
   gap: 20px;
   align-items: center;
   justify-items: center;
+  height: auto;
+  @include media-1020 {
+    @include layout-4-columns($grid-template-columns: 1fr 1fr 1fr, $grid-template-rows: 1fr 1fr 1fr 1fr);
+  }
 }

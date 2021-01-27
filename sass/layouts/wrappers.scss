@@ -1,4 +1,21 @@
 .wrapper {
   max-width: $content-width;
   margin: auto;
+  @include media-1020 {
+    max-width: $content-small-width;
+  }
+  @include media-768 {
+    max-width: $tablet-width;
+  }
+  @include media-375 {
+    max-width: $mobile-big-width;
+  }
+}
+
+.header__wrapper {
+  @include media-768 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }

@@ -27,6 +27,7 @@
   display: $display;
   grid-template-columns: $grid-template-columns;
   grid-template-rows: $grid-template-rows;
+  
 }
 
 @mixin flex($display: flex, $align-items: center, $justify-content: space-between){
@@ -35,3 +36,18 @@
   justify-content: $justify-content;
 }
 
+@mixin media-1020 {
+  @media (max-width: $content-small-width) { @content; }
+}
+
+@mixin media-768 {
+  @media (max-width: $tablet-width) { @content; }
+}
+
+@mixin media-375 {
+  @media (max-width: $mobile-big-width) { @content; }
+}
+
+@mixin  media-320  {
+  @media (max-width: $mobile-small-width) { @content; }
+}

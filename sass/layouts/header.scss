@@ -2,17 +2,36 @@
   position: fixed;
   z-index: 100;
   width: 100%;
+  height: auto;
   color: $color-logo;
   background: $color-bg;
   border-bottom: 6px solid $color-bg-border;
+  @include media-768 {
+    border-bottom: none;  }
+}
+.logo-center {
+  @include media-768 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .header__main {
   @include flex();
+  width: 100%;
 }
 
 .header__navigation {
-  margin: 42px 40px 33px;
+  margin: 42px 12px 33px;
+  @include media-768 {
+    display: none;
+  }
+  @include media-375 {
+    display: none;
+  }
+  @include media-320 {
+    display: none;
+  }
 }
 
 .logo {
@@ -20,6 +39,9 @@
   color: $color-logo;
   text-decoration: none;
   margin: 29px 0 35px 40px;
+  @include media-768 {
+    margin: 23px 0;
+  }
 }
 
 .star-color {
