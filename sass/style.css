@@ -1136,6 +1136,11 @@ a.active {
   left: 0;
 }
 
+.hamburger-rotate {
+  transform: rotate(90deg);
+  transition: all ease 0.3s;
+}
+
 .hamburger__line {
   top: calc(50% - 1.2px);
   left: 0;
@@ -1149,10 +1154,16 @@ a.active {
   flex-direction: column;
   position: absolute;
   padding: 162px 0 0 71px;
-  top: 70px;
+  top: -800px;
   left: 0;
   z-index: 50;
+  transition: all ease 1.3s;
   display: none;
+}
+@media (max-width: 767px) {
+  .navigation-hamburger > * {
+    display: flex;
+  }
 }
 .navigation-hamburger > * li {
   list-style: none;
@@ -1166,6 +1177,11 @@ a.active {
   margin: 0;
   font-family: Lato;
   letter-spacing: -0.035em;
+}
+
+.burger-menu > * {
+  top: 70px;
+  transition: all ease 1.3s;
 }
 
 .footer-circle {

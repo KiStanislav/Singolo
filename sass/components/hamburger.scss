@@ -43,7 +43,11 @@
     bottom: 0;
     left: 0;
   }
-  
+}
+
+.hamburger-rotate {
+  transform: rotate(90deg);
+  transition: all ease 0.3s;
 }
 
 .hamburger__line {
@@ -60,13 +64,14 @@
   flex-direction: column;
   position: absolute;
   padding: 162px 0 0 71px;
-  top: 70px;
+  top: -800px;
   left: 0;
   z-index: 50;
+  transition: all ease 1.3s;
   display: none;
-  // @include media-768 {
-  //   display: flex;
-  // }
+  @include media-768 {
+    display: flex;
+  }
   li {
     list-style: none;
     cursor: pointer;
@@ -75,4 +80,9 @@
     @include font(2.4rem, bold, 2.9rem);
   letter-spacing: -0.035em
   }
+}
+
+.burger-menu>* {
+  top: 70px;
+  transition: all ease 1.3s;
 }

@@ -96,8 +96,8 @@ const burger = document.querySelector('.hamburger');
 const burgerMenu = document.querySelector('.navigation-hamburger')
 
 burger.addEventListener('click', () => {
-  burger.classList.toggle('.hamburger-rotate');
-  burgerMenu.classList.toggle('.burger-menu')
+  burger.classList.toggle('hamburger-rotate');
+  burgerMenu.classList.toggle('burger-menu')
 
 
 })
