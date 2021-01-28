@@ -36,7 +36,7 @@
 
 .logo {
   display: inline-block;
-  color: $color-logo;
+    color: $color-logo;
   text-decoration: none;
   margin: 29px 0 35px 40px;
   @include media-768 {

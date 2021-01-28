@@ -7,6 +7,9 @@
     top: 60px;  
     border-bottom: none;
   }
+  @include media-375 {
+    top: 53px;
+  }
 }
 .services-header {
   padding: 59px 44px 60px 40px;
@@ -17,7 +20,9 @@
   @include media-768 {
     padding: 25px 30px;
   }
-
+  @include media-375 {
+    padding: 25px 15px;
+  }
 }
 
 .services-header p {
@@ -28,8 +33,9 @@
   padding: 0 40px 60px 40px;
   @include media-768 {
     padding: 0 33px 15px 33px;
-
   }
+  @include media-375 {
+    padding: 0 15px 33px;  }
 }
 
 .tool p {

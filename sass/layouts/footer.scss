@@ -8,12 +8,20 @@
 }
 .footer-bg {
   @include flex();
+  @include media-768 {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .copyright {
   margin-left: 40px;
+  @include media-768 {
+    display: none;
+  }
 }
 
 .footer-social-network {
+  display: flex;
   padding: 22px 42px;
 }

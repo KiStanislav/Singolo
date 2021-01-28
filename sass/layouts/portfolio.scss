@@ -4,17 +4,28 @@
   position: relative;
   top: 72px;
   @include media-768 {
-    top: 60px;  
+    top: 60px;
     border-bottom: none;
   }
 }
 .portfolio-bg {
   margin: auto;
   padding-bottom: 68px;
+  @include media-768 {
+    padding-bottom: 42px;
+  }
 }
 
 .portfolio-section-header {
   padding: 59px 40px 0 40px;
+  @include media-768 {
+    padding: 0;
+    padding-top: 42px;
+    margin: 0 30px 10px;
+  }
+  @include media-375 {
+    margin: 0 15px;
+  }
 }
 
 .portfolio-description {
@@ -25,17 +36,37 @@
   padding: 18px 0 34px 40px;
   color: $color-tag_dart;
   pointer-events: none;
+  @include media-768 {
+    padding: 0;
+    margin: 15px 0 25px 30px;
+  }
+  @include media-375 {
+    margin: 15px 0 25px 15px;
+  }
 }
 
 .tag {
   pointer-events: auto;
 }
 
+span.tag {
+  @include media-375 {
+    margin-right: 0;
+    padding: 2px 3px;
+  }
+}
+
 .layout-4-column {
   padding: 0 40px;
+  @include media-375 {
+    padding: 0 15px;
+  }
 }
 
 .portfolio-image img {
   width: 100%;
   height: auto;
+}
+span>* {
+  display: flex;
 }

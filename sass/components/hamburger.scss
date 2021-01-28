@@ -20,6 +20,7 @@
 .hamburger {
   display: none;
   position: relative;
+  z-index: 100;
   width: 25px;
   height: 20px;
   @include media-768 {
@@ -49,4 +50,29 @@
  @extend %hamburger-line;
  top: calc(50% - 1.2px);
  left: 0;
+}
+
+.navigation-hamburger>* {
+  background: $color-bg;
+  width: 278px;
+  height: 812px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 162px 0 0 71px;
+  top: 70px;
+  left: 0;
+  z-index: 50;
+  display: none;
+  // @include media-768 {
+  //   display: flex;
+  // }
+  li {
+    list-style: none;
+    cursor: pointer;
+    padding-top: 27px;
+    text-align: left;
+    @include font(2.4rem, bold, 2.9rem);
+  letter-spacing: -0.035em
+  }
 }
