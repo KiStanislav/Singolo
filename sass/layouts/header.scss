@@ -7,12 +7,17 @@
   background: $color-bg;
   border-bottom: 6px solid $color-bg-border;
   @include media-768 {
-    border-bottom: none;  }
+    border-bottom: none;
+  }
 }
+
 .logo-center {
+  position: absolute;
   @include media-768 {
+    position: relative;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -34,16 +39,30 @@
   }
 }
 
+.logo_burger {
+  display: inline-block;
+  text-decoration: none;
+  z-index: 100;
+}
+
 .logo {
   display: inline-block;
-    color: $color-logo;
+  color: $color-logo;
   text-decoration: none;
   margin: 29px 0 35px 40px;
   @include media-768 {
-    margin: 23px 0;
+    margin: 23px 0 23px 31px;
   }
 }
 
 .star-color {
+  display: inline-block;
   color: $color-main-nav;
+  @include font(2.5rem, bold, 3rem);
+  letter-spacing: -0.03em;
+  @include media-768 {
+    @include font(2rem, bold, 2.4rem);
+  letter-spacing: -0.03em;
+  margin: 23px 0 23px 2px;
+  }
 }

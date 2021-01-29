@@ -2,9 +2,9 @@
   background: $color-slider-bg;
   border-bottom: 6px solid $color-slider-shadow;
   position: relative;
-  top: 72px;
+  top: 66px;
   @include media-768 {
-    top: 60px;
+    top: 47px;
   }
 }
 
@@ -57,11 +57,11 @@
 .arrow-left:hover {
   cursor: pointer;
   transform: scale(1.5);
-  transition: 0.8s;
+  @extend %transition;
 }
 
 .arrow-right:hover {
   cursor: pointer;
   transform: scale(1.5);
-  transition: 0.8s;
+  @extend %transition;
 }

@@ -5,9 +5,20 @@ function onScroll(event) {
   const curPos = window.scrollY;
   const ancher_block = document.querySelectorAll('#body>div, section');
   const links = document.querySelectorAll('#menu a');
+  const linksBurger = document.querySelectorAll('#menu-burger a');
   ancher_block.forEach((el) => {
     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       links.forEach((a) => {
+        a.classList.remove('active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('active');
+        }
+      })
+    }
+  });
+  ancher_block.forEach((el) => {
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      linksBurger.forEach((a) => {
         a.classList.remove('active');
         if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
           a.classList.add('active');
@@ -51,14 +62,12 @@ function shuffleNodes() {
 };
 
 //slider
-// let offset = -3063; 
 const images = document.querySelectorAll('.slider-line img');
 const sliderLine = document.querySelector('.slider .slider-line ');
 let count = 0;
 let width;
 
 function init() {
-  // console.log('resize');
   width = document.querySelector('.slider').offsetWidth;
   sliderLine.style.width = width * images.length + 'px';
   images.forEach(item => {
@@ -93,12 +102,15 @@ function rollSlider() {
 
 //hamburger-menu
 const burger = document.querySelector('.hamburger');
-const burgerMenu = document.querySelector('.navigation-hamburger')
+const burgerMenu = document.querySelector('.navigation-hamburger');
+const logo = document.querySelector('.logo-center');
+const lock = document.querySelector('body');
+
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('hamburger-rotate');
-  burgerMenu.classList.toggle('burger-menu')
-
-
+  burgerMenu.classList.toggle('burger-menu');
+  logo.classList.toggle('logo_burger');
+  lock.classList.toggle('lock');
 })
 

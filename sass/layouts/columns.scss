@@ -4,7 +4,6 @@
   @include media-1020 {
     @include layout-3-columns($columns: 1fr 1fr, $rows: 1fr 1fr 1fr);
     margin-right: 35px;
-    
   }
   @include media-768 {
     @include layout-3-columns($columns: 1fr, $rows: 1fr 1fr 1fr 1fr 1fr 1fr);
@@ -104,5 +103,8 @@
   @include media-768 {
     @include layout-4-columns($grid-template-columns: 1fr 1fr, $grid-template-rows: 1fr 1fr 1fr 1fr);
     gap: 13px;
+    span:nth-child(1n+9) {
+      display: none;
+    }
   }
 }

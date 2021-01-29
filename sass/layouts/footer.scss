@@ -1,11 +1,12 @@
 .footer {
   background: $color-bg;
   position: relative;
-  top: 72px;
+  top: 66px;
   @include media-768 {
-    top: 60px;  
+    top: 47px;  
   }
 }
+
 .footer-bg {
   @include flex();
   @include media-768 {

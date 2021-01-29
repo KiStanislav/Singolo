@@ -2,15 +2,13 @@
   background-color: $color-services-background;
   border-bottom: 6px solid $color-services-shadow;
   position: relative;
-  top: 72px;
+  top: 66px;
   @include media-768 {
-    top: 60px;  
+    top: 47px;  
     border-bottom: none;
   }
-  @include media-375 {
-    top: 53px;
-  }
 }
+
 .services-header {
   padding: 59px 44px 60px 40px;
   box-sizing: padding-box;
@@ -30,9 +28,9 @@
 }
 
 .services-list {
-  padding: 0 40px 60px 40px;
+  padding: 0 40px 60px;
   @include media-768 {
-    padding: 0 33px 15px 33px;
+    padding: 0 33px 15px;
   }
   @include media-375 {
     padding: 0 15px 33px;  }

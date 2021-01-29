@@ -445,7 +445,7 @@ template {
   box-sizing: border-box;
 }
 
-.tag, .footer-circle_linkedin:hover, .footer-circle_twitter:hover, .footer-circle_google:hover, .footer-circle_facebook:hover, .navigation a:hover {
+.tag, .footer-circle_linkedin:hover, .footer-circle_twitter:hover, .footer-circle_google:hover, .footer-circle_facebook:hover, .burger-menu > *, .navigation-hamburger > *, .hamburger-rotate, .navigation a:hover, .arrow-right:hover, .arrow-left:hover {
   transition: all 0.5s;
 }
 
@@ -573,10 +573,15 @@ ul {
   }
 }
 
+.logo-center {
+  position: absolute;
+}
 @media (max-width: 767px) {
   .logo-center {
+    position: relative;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -606,6 +611,12 @@ ul {
   }
 }
 
+.logo_burger {
+  display: inline-block;
+  text-decoration: none;
+  z-index: 100;
+}
+
 .logo {
   display: inline-block;
   color: #FFFFFF;
@@ -614,23 +625,43 @@ ul {
 }
 @media (max-width: 767px) {
   .logo {
-    margin: 23px 0;
+    margin: 23px 0 23px 31px;
   }
 }
 
 .star-color {
+  display: inline-block;
   color: #F06C64;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 3rem;
+  margin: 0;
+  font-family: Lato;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 767px) {
+  .star-color {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 2.4rem;
+    margin: 0;
+    font-family: Lato;
+    letter-spacing: -0.03em;
+    margin: 23px 0 23px 2px;
+  }
 }
 
 .slider__background {
   background: #F06C64;
   border-bottom: 6px solid #EA676B;
   position: relative;
-  top: 72px;
+  top: 66px;
 }
 @media (max-width: 767px) {
   .slider__background {
-    top: 60px;
+    top: 47px;
   }
 }
 
@@ -685,13 +716,11 @@ ul {
 .arrow-left:hover {
   cursor: pointer;
   transform: scale(1.5);
-  transition: 0.8s;
 }
 
 .arrow-right:hover {
   cursor: pointer;
   transform: scale(1.5);
-  transition: 0.8s;
 }
 
 .tool {
@@ -852,23 +881,21 @@ ul {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 13px;
   }
+  .portfolio-image span:nth-child(1n+9) {
+    display: none;
+  }
 }
 
 .services {
   background-color: #F2F2F2;
   border-bottom: 6px solid #FFFFFF;
   position: relative;
-  top: 72px;
+  top: 66px;
 }
 @media (max-width: 767px) {
   .services {
-    top: 60px;
+    top: 47px;
     border-bottom: none;
-  }
-}
-@media (max-width: 374px) {
-  .services {
-    top: 53px;
   }
 }
 
@@ -897,11 +924,11 @@ ul {
 }
 
 .services-list {
-  padding: 0 40px 60px 40px;
+  padding: 0 40px 60px;
 }
 @media (max-width: 767px) {
   .services-list {
-    padding: 0 33px 15px 33px;
+    padding: 0 33px 15px;
   }
 }
 @media (max-width: 374px) {
@@ -928,11 +955,11 @@ ul {
   border-bottom: 6px solid #323746;
   background: #2D303A;
   position: relative;
-  top: 72px;
+  top: 66px;
 }
 @media (max-width: 767px) {
   .portfolio {
-    top: 60px;
+    top: 47px;
     border-bottom: none;
   }
 }
@@ -998,6 +1025,11 @@ ul {
 .layout-4-column {
   padding: 0 40px;
 }
+@media (max-width: 767px) {
+  .layout-4-column {
+    padding: 0 30px;
+  }
+}
 @media (max-width: 374px) {
   .layout-4-column {
     padding: 0 15px;
@@ -1016,11 +1048,11 @@ span > * {
 .footer {
   background: #2D303A;
   position: relative;
-  top: 72px;
+  top: 66px;
 }
 @media (max-width: 767px) {
   .footer {
-    top: 60px;
+    top: 47px;
   }
 }
 
@@ -1138,7 +1170,6 @@ a.active {
 
 .hamburger-rotate {
   transform: rotate(90deg);
-  transition: all ease 0.3s;
 }
 
 .hamburger__line {
@@ -1157,8 +1188,17 @@ a.active {
   top: -800px;
   left: 0;
   z-index: 50;
-  transition: all ease 1.3s;
   display: none;
+}
+.navigation-hamburger > *::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: -100%;
+  opacity: 0.6;
+  background-color: #2D303A;
+  z-index: -1;
 }
 @media (max-width: 767px) {
   .navigation-hamburger > * {
@@ -1180,8 +1220,12 @@ a.active {
 }
 
 .burger-menu > * {
-  top: 70px;
-  transition: all ease 1.3s;
+  top: 0;
+}
+.burger-menu > *::after {
+  opacity: 0.6;
+  left: 0;
+  top: 0;
 }
 
 .footer-circle {
