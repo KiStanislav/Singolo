@@ -31,12 +31,6 @@
   @include media-768 {
     display: none;
   }
-  @include media-375 {
-    display: none;
-  }
-  @include media-320 {
-    display: none;
-  }
 }
 
 .logo_burger {
@@ -63,6 +57,6 @@
   @include media-768 {
     @include font(2rem, bold, 2.4rem);
   letter-spacing: -0.03em;
-  margin: 23px 0 23px 2px;
+  margin: 23px 2px;
   }
 }

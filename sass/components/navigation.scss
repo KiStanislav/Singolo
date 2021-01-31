@@ -3,6 +3,7 @@
   @include font(1.2rem, bold, 1.4rem);
   text-align: right;
   letter-spacing: -0.035em;
+  text-transform: uppercase;
   li:first-child {
     list-style: none;
     cursor: pointer;

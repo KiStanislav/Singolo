@@ -1,20 +1,19 @@
 .tag {
   @include font(1.2rem, normal, 1.2rem);
-  box-sizing: border-box;
   margin-right: 8px;
   text-align: center;
   cursor: pointer;
   @extend %transition;
   @include tag();
-    border: 1px solid $color-tag_dart-border;
-    color: $color-tag_dart;
-    &:hover {
-      color: $color-tag_selected;
-  border: 1px solid $color_tag_selected-border;
-    }
+  border: 1px solid $color-tag_dart-border;
+  color: $color-tag_dart;
+  &:hover {
+    color: $color-tag_selected;
+    border: 1px solid $color_tag_selected-border;
+  }
   &_selected {
     @include tag();
     border: 1px solid $color-tag_selected-border;
     color: $color-tag_selected;
-  }  
+  }
 }

@@ -9,12 +9,6 @@
   @include media-768 {
     display: inline-block;
   }
-  @include media-375 {
-    display: inline-block;
-  }
-  @include media-320 {
-    display: inline-block;
-  }
 }
 
 .hamburger {
@@ -27,12 +21,7 @@
     display: inline-block;
     margin-left: 20px;
   }
-  @include media-375 {
-    display: inline-block;
-  }
-  @include media-320 {
-    display: inline-block;
-  }
+
   &::before {
     @extend %hamburger-line;
     top: 0;

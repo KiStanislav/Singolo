@@ -3,10 +3,10 @@ document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
   const curPos = window.scrollY;
-  const ancher_block = document.querySelectorAll('#body>div, section');
+  const ancherBlock = document.querySelectorAll('#body>*');
   const links = document.querySelectorAll('#menu a');
   const linksBurger = document.querySelectorAll('#menu-burger a');
-  ancher_block.forEach((el) => {
+  ancherBlock.forEach((el) => {
     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       links.forEach((a) => {
         a.classList.remove('active');
@@ -14,10 +14,6 @@ function onScroll(event) {
           a.classList.add('active');
         }
       })
-    }
-  });
-  ancher_block.forEach((el) => {
-    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       linksBurger.forEach((a) => {
         a.classList.remove('active');
         if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
@@ -26,13 +22,18 @@ function onScroll(event) {
       })
     }
   });
+  // ancher_block.forEach((el) => {
+  //   if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      
+  //   }
+  // });
 }
 
 // interactive tab menu
-const TAB = document.getElementById('tab');
+const tab = document.getElementById('tab');
 
-TAB.addEventListener('click', (event) => {
-  TAB.querySelectorAll('span').forEach(el => el.classList.remove('tag_selected'));
+tab.addEventListener('click', (event) => {
+  tab.querySelectorAll('.tag_selected').forEach(el => el.classList.remove('tag_selected'));
   event.target.classList.add('tag_selected');
   shuffleNodes();
 });
@@ -106,11 +107,9 @@ const burgerMenu = document.querySelector('.navigation-hamburger');
 const logo = document.querySelector('.logo-center');
 const lock = document.querySelector('body');
 
-
 burger.addEventListener('click', () => {
   burger.classList.toggle('hamburger-rotate');
   burgerMenu.classList.toggle('burger-menu');
   logo.classList.toggle('logo_burger');
   lock.classList.toggle('lock');
 })
-

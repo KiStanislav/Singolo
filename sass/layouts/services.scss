@@ -9,6 +9,12 @@
   }
 }
 
+// #services {
+//   width: 300px;
+//   height: 300px;
+//   position: absolute;
+// }
+
 .services-header {
   padding: 59px 44px 60px 40px;
   box-sizing: padding-box;
@@ -33,7 +39,8 @@
     padding: 0 33px 15px;
   }
   @include media-375 {
-    padding: 0 15px 33px;  }
+    padding: 0 15px 33px;  
+  }
 }
 
 .tool p {
@@ -41,5 +48,5 @@
   text-align: justify;
 }
 .tool h3 {
-  margin: 0 0 7px 0;
+  margin: 0 0 7px;
 }

@@ -15,7 +15,7 @@
   }
 }
 
-.tool__item-1 {
+.tool-icon {
   @include layout-2-columns();
   @include media-768 {
     gap: 10px;
@@ -23,72 +23,6 @@
     justify-self: center;
   }
   @include media-375 {
-    gap: 10px;
-    width: 260px;
-  }
-}
-
-.tool__item-2 {
-  @include layout-2-columns();
-  @include media-768 {
-    gap: 10px;
-    width: 300px;
-    justify-self: center;
-  }
-  @include media-375 {
-    gap: 10px;
-    width: 260px;
-  }
-}
-
-.tool__item-3 {
-  @include layout-2-columns();
-  @include media-768 {
-    gap: 10px;
-    width: 300px;
-    justify-self: center;
-  }
-  @include media-375 {
-    gap: 10px;
-    width: 260px;
-  }
-}
-
-.tool__item-4 {
-  @include layout-2-columns();
-  @include media-768 {
-    gap: 10px;
-    width: 300px;
-    justify-self: center;
-  }
-  @include media-375 {
-    gap: 10px;
-    width: 260px;
-  }
-}
-
-.tool__item-5 {
-  @include layout-2-columns();
-  @include media-768 {
-    gap: 10px;
-    width: 300px;
-    justify-self: center;
-  }
-  @include media-375 {
-    gap: 10px;
-    width: 260px;
-  }
-}
-
-.tool__item-6 {
-  @include layout-2-columns();
-  @include media-768 {
-    gap: 10px;
-    width: 300px;
-    justify-self: center;
-  }
-  @include media-375 {
-    gap: 10px;
     width: 260px;
   }
 }
@@ -97,13 +31,16 @@
   @include layout-4-columns();
   gap: 20px;
   height: auto;
+  img:nth-child(1n+13) {
+    display: none;
+  }
   @include media-1020 {
     @include layout-4-columns($grid-template-columns: 1fr 1fr 1fr, $grid-template-rows: 1fr 1fr 1fr 1fr);
   }
   @include media-768 {
     @include layout-4-columns($grid-template-columns: 1fr 1fr, $grid-template-rows: 1fr 1fr 1fr 1fr);
     gap: 13px;
-    span:nth-child(1n+9) {
+    img:nth-child(1n+9) {
       display: none;
     }
   }
