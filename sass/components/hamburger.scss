@@ -48,12 +48,12 @@
 .navigation-hamburger > * {
   background: $color-bg;
   width: 278px;
-  height: 812px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: absolute;
   padding: 162px 0 0 71px;
-  top: -800px;
+  top: -100vh;
   left: 0;
   z-index: 50;
   @extend %transition;
@@ -90,5 +90,3 @@
     top: 0;
   }
 }
-
-

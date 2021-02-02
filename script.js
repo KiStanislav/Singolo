@@ -1,11 +1,11 @@
 //interactive navigation menu
+const ancherBlock = document.querySelectorAll('#body>*');
+const links = document.querySelectorAll('#menu a');
+const linksBurger = document.querySelectorAll('#menu-burger a');
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
   const curPos = window.scrollY;
-  const ancherBlock = document.querySelectorAll('#body>*');
-  const links = document.querySelectorAll('#menu a');
-  const linksBurger = document.querySelectorAll('#menu-burger a');
   ancherBlock.forEach((el) => {
     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       links.forEach((a) => {
@@ -22,11 +22,6 @@ function onScroll(event) {
       })
     }
   });
-  // ancher_block.forEach((el) => {
-  //   if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
-      
-  //   }
-  // });
 }
 
 // interactive tab menu
@@ -54,7 +49,7 @@ function shuffle(items) {
 
 function shuffleNodes() {
   let nodes = list.children, i = 0;
-  nodes = Array.prototype.slice.call(nodes);
+  nodes = Array.prototype.slice.call(list.children);
   nodes = shuffle(nodes);
   while(i < nodes.length) {
     list.appendChild(nodes[i]);
@@ -65,7 +60,7 @@ function shuffleNodes() {
 //slider
 const images = document.querySelectorAll('.slider-line img');
 const sliderLine = document.querySelector('.slider .slider-line ');
-let count = 0;
+let count = 4;
 let width;
 
 function init() {
