@@ -1,5 +1,5 @@
 //interactive navigation menu
-const ancherBlock = document.querySelectorAll('#body>*');
+const ancherBlock = document.querySelectorAll('#body > div');
 const links = document.querySelectorAll('#menu a');
 const linksBurger = document.querySelectorAll('#menu-burger a');
 document.addEventListener('scroll', onScroll);
@@ -107,4 +107,12 @@ burger.addEventListener('click', () => {
   burgerMenu.classList.toggle('burger-menu');
   logo.classList.toggle('logo_burger');
   lock.classList.toggle('lock');
+})
+
+burgerMenu.addEventListener('click', () => {
+  burger.classList.remove('hamburger-rotate');
+  burgerMenu.classList.remove('burger-menu');
+  logo.classList.remove('logo_burger');
+  lock.classList.remove('lock');
+
 })
