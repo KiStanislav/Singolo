@@ -60,7 +60,7 @@ function shuffleNodes() {
 //slider
 const images = document.querySelectorAll('.slider-line img');
 const sliderLine = document.querySelector('.slider .slider-line ');
-let count = 4;
+let count = 2;
 let width;
 
 function init() {
@@ -77,23 +77,30 @@ init();
 window.addEventListener('resize', init);
 
 document.querySelector('.arrow-left').addEventListener('click', function () {
-  count++;
-  if (count >= images.length ) {
-      count = 0;
-  }
+  sliderLine.style.transition = "all ease .5s";
+  count <= 0 ? false : count--;
   rollSlider();
+  jumpSlider();
 });
 
 document.querySelector('.arrow-right').addEventListener('click', function () {
-  count--;
-  if (count < 0) {
-      count = images.length - 1;
-  }
+  sliderLine.style.transition = "all ease .5s";
+  count >= images.length - 1 ? false : count++;
   rollSlider();
+  jumpSlider();
 });
 
 function rollSlider() {
   sliderLine.style.transform = 'translate(-' + count * width + 'px)';
+}
+
+function jumpSlider() {
+  sliderLine.addEventListener('transitionend', function () {
+    count === 0 ? count = images.length - 2 : count;
+    count === 3 ? count = images.length - 3 : count;
+    sliderLine.style.transition = "none";
+    rollSlider();
+  });
 }
 
 //hamburger-menu
@@ -114,5 +121,4 @@ burgerMenu.addEventListener('click', () => {
   burgerMenu.classList.remove('burger-menu');
   logo.classList.remove('logo_burger');
   lock.classList.remove('lock');
-
 })
