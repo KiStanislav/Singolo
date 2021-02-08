@@ -850,7 +850,8 @@ ul {
 }
 
 #services {
-  height: 100px;
+  height: 10px;
+  width: 10px;
   position: absolute;
 }
 
@@ -949,7 +950,8 @@ span > * {
 }
 
 #portfolio {
-  height: 500px;
+  height: 10px;
+  width: 10px;
   position: absolute;
 }
 
