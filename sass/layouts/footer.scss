@@ -1,10 +1,6 @@
 .footer {
   background: $color-bg;
   position: relative;
-  top: 66px;
-  @include media-768 {
-    top: 47px;  
-  }
 }
 
 .footer-bg {

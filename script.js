@@ -1,5 +1,5 @@
 //interactive navigation menu
-const ancherBlock = document.querySelectorAll('#body > div');
+const ancherBlock = document.querySelectorAll('.anchor');
 const links = document.querySelectorAll('#menu a');
 const linksBurger = document.querySelectorAll('#menu-burger a');
 document.addEventListener('scroll', onScroll);
@@ -77,15 +77,21 @@ init();
 window.addEventListener('resize', init);
 
 document.querySelector('.arrow-left').addEventListener('click', function () {
-  sliderLine.style.transition = "all ease .5s";
-  count <= 0 ? false : count--;
+  const slideFirst = 0;
+  sliderLine.style.transition = "all ease .3s";
+  if (count >= slideFirst) {
+    count--;
+  } 
   rollSlider();
   jumpSlider();
 });
 
 document.querySelector('.arrow-right').addEventListener('click', function () {
-  sliderLine.style.transition = "all ease .5s";
-  count >= images.length - 1 ? false : count++;
+  const slideLast = images.length - 1;
+  sliderLine.style.transition = "all ease .3s";
+  if (count <= slideLast) {
+    count++;
+  } 
   rollSlider();
   jumpSlider();
 });
@@ -95,9 +101,11 @@ function rollSlider() {
 }
 
 function jumpSlider() {
+  const imageOne = images.length - 2;
+  const imageTwo = images.length - 3;
   sliderLine.addEventListener('transitionend', function () {
-    count === 0 ? count = images.length - 2 : count;
-    count === 3 ? count = images.length - 3 : count;
+    count === 0 ? count = imageOne : count;
+    count === 3 ? count = imageTwo : count;
     sliderLine.style.transition = "none";
     rollSlider();
   });
