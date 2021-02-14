@@ -519,12 +519,12 @@ ul {
   margin: 0;
 }
 
-#container {
+.container {
   position: relative;
   top: 66px;
 }
 @media (max-width: 767px) {
-  #container {
+  .container {
     top: 57px;
   }
 }

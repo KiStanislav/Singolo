@@ -35,7 +35,7 @@ ul {
   margin: 0;
 }
 
-#container {
+.container {
   position: relative;
   top: 66px;
   @include media-768 {
