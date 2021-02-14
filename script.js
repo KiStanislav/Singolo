@@ -2,24 +2,22 @@
 const ancherBlock = document.querySelectorAll('.anchor');
 const links = document.querySelectorAll('#menu a');
 const linksBurger = document.querySelectorAll('#menu-burger a');
-document.addEventListener('scroll', onScroll);
 
-function onScroll(event) {
+document.addEventListener('scroll', function() {
   const curPos = window.scrollY;
   ancherBlock.forEach((el) => {
     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
-      links.forEach((a) => {
-        a.classList.remove('active');
-        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
-          a.classList.add('active');
-        }
-      })
-      linksBurger.forEach((a) => {
-        a.classList.remove('active');
-        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
-          a.classList.add('active');
-        }
-      })
+      addRemoveClass(links, el);
+      addRemoveClass(linksBurger, el);
+    }
+  });
+})
+
+function addRemoveClass(menu, el) {
+  menu.forEach((a) => {
+    a.classList.remove('active');
+    if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+      a.classList.add('active');
     }
   });
 }
