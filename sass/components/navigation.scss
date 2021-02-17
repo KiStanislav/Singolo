@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+  @include font(1.2rem, bold, 1.4rem);
+  text-align: right;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  li:first-child {
+    list-style: none;
+    cursor: pointer;
+  }
+  a {
+    color: $color-logo;
+    text-decoration: none;
+    margin-right: 28px;
+    cursor: pointer;
+    &:hover {
+      color: $color-main-nav;
+      @extend %transition;
+    }
+  }
+}
+
+a.active {
+  color: $color-main-nav
+}

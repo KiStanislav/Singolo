@@ -1,0 +1,28 @@
+.footer-circle {
+  margin-left: 8px;
+  cursor: pointer;
+  &_facebook {
+    &:hover {
+      @extend %brightness;
+      @extend %transition;
+    }
+  }
+  &_google {
+    &:hover {
+      @extend %brightness;
+      @extend %transition;
+    }
+  }
+  &_twitter {
+    &:hover {
+      @extend %brightness;
+      @extend %transition;
+    }
+  }
+  &_linkedin {
+    &:hover {
+      @extend %brightness;
+      @extend %transition;
+    }
+  }
+}

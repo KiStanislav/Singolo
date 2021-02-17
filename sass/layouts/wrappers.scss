@@ -1,0 +1,29 @@
+.wrapper {
+  max-width: $content-width;
+  margin: auto;
+  @include media-1020 {
+    max-width: $content-small-width;
+  }
+  @include media-768 {
+    max-width: $tablet-width;
+  }
+  @include media-375 {
+    max-width: $mobile-big-width;
+  }
+  @include media-320 {
+    max-width: $mobile-small-width;
+  }
+}
+
+.header__wrapper {
+  @include media-768 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  @include media-320 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

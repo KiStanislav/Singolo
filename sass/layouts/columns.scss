@@ -1,0 +1,47 @@
+.tool {
+  @include layout-3-columns();
+  gap: 50px;
+  @include media-1020 {
+    @include layout-3-columns($columns: 1fr 1fr, $rows: 1fr 1fr 1fr);
+    margin-right: 35px;
+  }
+  @include media-768 {
+    @include layout-3-columns($columns: 1fr, $rows: 1fr 1fr 1fr 1fr 1fr 1fr);
+    margin-right: 0;
+    gap: 15px;
+  }
+  @include media-375 {
+    width: 260px;
+  }
+}
+
+.tool-icon {
+  @include layout-2-columns();
+  @include media-768 {
+    gap: 10px;
+    width: 300px;
+    justify-self: center;
+  }
+  @include media-375 {
+    width: 260px;
+  }
+}
+
+.portfolio-image {
+  @include layout-4-columns();
+  gap: 20px;
+  height: auto;
+  img:nth-child(1n+13) {
+    display: none;
+  }
+  @include media-1020 {
+    @include layout-4-columns($grid-template-columns: 1fr 1fr 1fr, $grid-template-rows: 1fr 1fr 1fr 1fr);
+  }
+  @include media-768 {
+    @include layout-4-columns($grid-template-columns: 1fr 1fr, $grid-template-rows: 1fr 1fr 1fr 1fr);
+    gap: 13px;
+    img:nth-child(1n+9) {
+      display: none;
+    }
+  }
+}

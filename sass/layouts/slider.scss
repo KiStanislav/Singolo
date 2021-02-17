@@ -1,0 +1,49 @@
+.slider__background {
+  background: $color-slider-bg;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  align-items: baseline;
+  max-width: 1021px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-line {
+  width: 2050px;
+  display: flex;
+  position: relative;
+  left: 0;
+}
+
+.slider-controls {
+  position: absolute;
+  margin: 30% auto;
+  padding: 0 30px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include media-768 {
+    padding: 0 10px;
+  }
+}
+
+.arrow-left,
+.arrow-right {
+  @include media-768 {
+    width: 8px;
+    height: 13.5px;
+  }
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  @extend %transition;
+}
