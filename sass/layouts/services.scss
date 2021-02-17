@@ -19,7 +19,9 @@
 }
 
 .services-header p {
+  height: 60px;
   margin-top: 18px;
+  overflow: hidden;
 }
 
 .services-list {
@@ -36,6 +38,12 @@
   @include font(1.2rem, normal, 2.2rem);
   text-align: justify;
 }
+
 .tool h3 {
   margin: 0 0 7px;
+}
+
+.tool-text {
+  height: 91px;
+  overflow: hidden;
 }
